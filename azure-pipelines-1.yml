@@ -34,6 +34,7 @@ steps:
 
 - task: Docker@2
   inputs:
+    buildContext: '$(Build.SourcesDirectory)/webapp'
     containerRegistry: 'DockerHub'
     repository: 'smoltok/azure'
     command: 'buildAndPush'
